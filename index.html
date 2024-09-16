@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC/DEPT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <!-- Ensure the video starts muted to allow autoplay -->
+        <video id="background-video" autoplay loop muted playsinline>
+            <source src="web.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Updated Header Section -->
+    <header class="header">
+        <div class="logo">BASIC/DEPT®</div>
+        <nav class="navigation">
+            <a href="#">WORK</a>
+            <a href="#">ABOUT</a>
+            <a href="#">NEWS</a>
+            <a href="#">THINKING</a>
+            <a href="#">PLEDGE</a>
+            <a href="#">CAREERS</a>
+            <a href="#">CONTACT</a>
+            <a href="#" class="more-options">...</a>
+        </nav>
+    </header>
+
+    <div class="awards-section"></div>
+        <img src="Screenshot 2024-09-15 135251.png" alt="awards" style="width: 100%;">
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <p>STAY IN THE KNOW</p>
+                <input type="email" placeholder="Email Address">
+                <button>&#x2192;</button>
+            </div>
+            <div class="footer-column">
+                <p>SOCIAL</p>
+                <ul>
+                    <li><a href="https://www.instagram.com/sainathladwa/">Instagram</a></li>
+                    <li><a href="https://x.com/Sainath78882912">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com/in/sainath-ladwa-1aa18226a/">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p>INITIATIVES</p>
+                <ul>
+                    <li><a href="#">Crafted</a></li>
+                    <li><a href="#">Applied</a></li>
+                    <li><a href="#">Brandbeats</a></li>
+                    <li><a href="#">Moves</a></li>
+                    <li><a href="#">B®/Good</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p>OFFICES</p>
+                <ul>
+                    <li>Bangalore – CA</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Ensure video is muted by default for autoplay, then allow unmuting with click
+        const video = document.getElementById("background-video");
+
+        video.addEventListener("click", function() {
+            if (video.muted) {
+                video.muted = false; // Unmute the video on click
+            } else {
+                video.muted = true; // Mute the video on another click
+            }
+        });
+
+        // Fallback for browsers that don't autoplay with sound
+        window.addEventListener('load', function() {
+            video.muted = true; // Keep muted initially to ensure autoplay works
+            video.play(); // Explicit play call to start video
+        });
+    </script>
+
+</body>
+</html>
